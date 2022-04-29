@@ -1,0 +1,772 @@
+*{
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #8b42c3 18.48%, #7d3cb6 36.31%, #621ea7 58.39%, #420e86 100%);
+}
+
+/* VISTA DEL LOGIN */
+
+#divIngresar{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    /* background-color: red; */
+}
+
+#divLogo{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* background-color: #9f0097;     */
+}
+
+.logo{
+    margin-top: 15px;
+    width:200px;
+    height: 160px;
+}
+
+.ingresarE-mail{
+    width: 70%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    /* background-color: #1e73a7; */
+    position: relative;
+}
+
+.e-mailIcon {
+    position: absolute;
+    align-self: center;
+    pointer-events: none;
+    margin-left:20px;
+    color:white;
+}
+
+.input__Login {
+    background-color:rgba(20, 20, 20, 0.178);
+    color:white;
+    width: 100%;
+    height: 45px;
+    border-radius:5px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) ;
+}
+.input__Login::placeholder{
+     margin-left:auto;
+     color: rgba(255, 255, 255, 0.787);
+}
+
+.writePassword{
+    width: 70%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 20px; */
+    /* background-color: #00259f; */
+}
+
+.passwordIcon {
+    position: absolute;
+    align-self: center;
+    pointer-events: none;
+    margin-left:20px;
+    color:white;
+}
+
+#iniciar{
+    background-color:rgb(224, 69, 224);
+    color:white;
+    font-size: medium;
+    width: 50%;
+    height: 45px;
+    border-radius:5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#google{
+    margin-top: 35%;
+    background-color:rgb(223, 215, 215);
+    color:black;
+    width: 48%;
+    height: 35px;
+    border-radius:20px;
+    border:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#google>p{
+    font-size: 14px;
+}
+
+.imageGoogle{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+#oLogin{
+    color:white;
+    height: auto;
+    width: 100%;
+    margin-top: 15px;
+    
+}
+#registro{
+    color:white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* VISTA DE REGISTRO */
+.div__Username{
+    width: 70%;
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.div__Username-afterError{
+    width: 70%;
+    display: flex;
+    justify-content: left;
+}
+
+.Register__input{
+    background-color:rgba(20, 20, 20, 0.178);
+    color:white;
+    width: 100%;
+    height: 45px;
+    border-radius:5px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) ;
+}
+.Register__input::placeholder { 
+    color: rgba(255, 255, 255, 0.568); 
+}
+
+.Register__button{
+    margin-top: 30px;
+    background-color:rgb(224, 69, 224);
+    color:white;
+    font-size: medium;
+    width: 50%;
+    height: 45px;
+    border-radius:5px;
+    border: none;
+    cursor: pointer;
+}
+
+#Register__iconBack{
+    color:rgba(255, 255, 255, 0.493) ;
+    font-size: 35px;
+    height: auto;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.imageLogin{
+    display: none;
+}
+
+/* errores para usuarios */
+.alertError{
+    color: rgb(233, 201, 201);
+    /* background-color: red; */
+    height: 20px;
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.alertError>p{
+    padding: 2px;
+    font-size: 12px; 
+}
+
+.alertError>p>i{
+    color: rgb(180, 4, 4);
+    font-size: 11px;
+}
+
+/* --------------- */
+/* VISTA DEL HOME */
+/* ------------- */
+/* header */
+.header{
+    width: 100vw;
+    height: 60px;
+    background: linear-gradient(180deg, #8b42c3 18.48%, #7d3cb6 36.31%, #621ea7 58.39%, #420e86 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: fixed;
+}
+
+.header__logo-div{
+    width: 40%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.header__logo{
+    width: 150px;
+    height: 40px; 
+    margin-left: 5%;
+    /* background-color: aqua;  */
+}
+
+.header__nav-div{
+    width: 50%;
+    height: 60px;
+    /* background-color: #f800d7; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.header__nav{
+    width:100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end; 
+    /* background-color: #482744; */
+}
+
+.header__nav-ul-li{
+    list-style: none;
+    display: inline-flex;
+}
+
+.icon__header{
+    font-size: 22px;
+    color: rgb(238, 237, 237);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.header__user-div{
+    width: 10%;
+    height: 60px;
+    /* background-color: #dadada; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#userName{
+    width:45px;
+    height: 45px;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    background-color: #f800d7;
+    border-radius: 50% 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Aside */
+.aside_d{
+    display: none; 
+}
+
+/* modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 550px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    color: #393838;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.div__span{
+    /* background-color: #780e86; */
+    width: 100%;
+    text-align: right;
+}
+
+.modal-content>h1{
+    font-size: 20px;
+    /* background-color: #888; */
+    text-align: center;
+    color: #6e6e6e;
+}
+
+.div__infoUser{
+    /* background-color: #c34273; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.div__infoUser>img{
+    width: 35px;
+    height: 35px;
+}
+
+.div__infoUser>h3{
+    margin-top:20px;
+    font-size: 16px;
+}
+
+.main__div__Modal{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #f800d7; */
+}
+
+.post__input{
+    margin-top: 20px;
+    width: 100%;
+    height: 130px;
+    text-align: left;
+    outline: none;
+    align-self: center;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #7a4a86;
+}
+::placeholder{
+    margin-left:auto;
+    color: rgb(121, 121, 121);
+   }
+
+.post__button{
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(180deg, #8b42c3 18.48%, #7d3cb6 36.31%, #621ea7 58.39%, #420e86 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.cancelEdit{
+    background: linear-gradient(180deg, #5e4174 18.48%, #634d77 36.31%, #4d3a60 58.39%, #7a6c8c 100%);
+    width: 50%;
+}
+
+.post__div-upPhoto{
+    width: 100%;
+    height:22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dadada;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+/* main */
+.main{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__div{
+    margin-top: 70px;
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #f800d7; */
+}
+
+.post__input__Initial{
+    margin-top: 20px;
+    width: 80%;
+    height: 60px;
+    text-align: left;
+    outline: none;
+    align-self: center;
+    border: none;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #7a4a8638;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgba(255, 255, 255, 0.399);
+    cursor: text;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.main__div-postPeople{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main__section-postPeople{
+    width: 85%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: left;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main__section-postPeople>h3{
+    /* background-color: #8d07b6; */
+    display: inline;
+}
+
+#postHour{
+    background-color: azure;
+    display: inline-flex;
+    color: rgb(100, 100, 100);
+    font-size: 12px;
+}
+
+.main__section-postPeople>p{
+    /* background-color: #a45bbb; */
+    text-align: left;
+    margin-top: 5px;
+    color: #2f2f2f;
+    text-align: justify;
+}
+
+.section-postPeople__photoUser{
+    width: 25px;
+    height: 25px;
+}
+
+.main__section-postPeople>figure{
+    width: 100%;
+    height: 350px;
+    /* background-color: red; */
+    display: flex;
+    margin-top: 10px;
+}
+
+.post2Img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* botones de eliminar o editar */
+.main__section-postPeople>div{
+    display: flex;
+    width: 100%;
+    /* background-color: chartreuse */
+}
+
+.likePost__div{
+    /* background-color: red; */
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.likePost{
+    margin-top: 10px;
+    background: linear-gradient(180deg, #8b42c3 18.48%, #7d3cb6 36.31%, #621ea7 58.39%, #420e86 100%);
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 80px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.likePost>i{
+    font-size: 15px;
+}
+
+.likePost:hover{
+    background: linear-gradient(180deg, #d94bf2 18.48%, #b63c9a 36.31%, #a71e9e 58.39%, #780e86 100%);
+    font-size: 15.5px; 
+}
+
+.bottonPostUser__div{
+    /* background-color: #c503bb; */
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+.bottonPostUser{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #880d82cd;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 80px;
+    height: 22px;
+    cursor: pointer;
+}
+.bottonPostUser:hover{
+    background-color: #420e86;
+}
+
+@media screen and (max-height: 750px){
+    *{
+        font-size: 14px;
+    }
+
+    #root{
+        height: 100%;
+        width: 100vw;
+    }
+
+    #iniciar{
+        font-size: 14px;
+    }
+
+    #google>p{
+        font-size: 12px;
+    }
+
+    .imageGooglep{
+        width: 18px;
+        height: 18px;
+        margin: 6px;
+    }
+
+    #registro{
+        margin-top: 5px;
+        margin-bottom: 20px;
+
+    }
+}
+
+@media screen and (min-width: 540px){
+    #google{
+        text-align: center;
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    #root{
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    #divIngresar{
+        width: 50%;      
+    }
+
+    .div__imageLogin{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imageLogin{
+        display: block;
+        opacity: 0.94;
+        height: 80vh;
+        width: auto;
+        margin-left: 50px;
+    }
+
+    #google{
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    #Register__iconBack{
+        margin-top: 30px;
+    }
+
+    .header__nav-div{
+        width: 60%;
+    }
+
+    .header__nav{
+        margin-inline-end: 5%; 
+    }
+
+    .mainandaside{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .aside_d{
+        display: flex;
+        background: linear-gradient(180deg, #ffffff 18.48%, #d7bde9ac 36.31%, #b67cf0ac 58.39%, #632ea7c6 100%);
+        width: 15%;
+        height: 300px;
+        margin-top: 85px;
+        border-radius: 10px;
+        text-align: left;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aside_d>img{
+        width: auto;
+        height:130px;
+        border-radius: 50%;
+    }
+
+    .aside_d>p{
+        margin-top: 30px;
+        font-size: 22px;
+        color: #626262;
+    }
+
+    #userName{
+        width:110px;
+        height: 110px;
+        font-size: 50px;
+        background-color: #c503bb;
+    }
+
+    .main{
+        /* background-color: rgb(195, 28, 28); */
+        height: 100vh;
+        width: 65%;
+        margin-left: 1%;
+    }
+
+    .main__div, .main__div-postPeople{
+        width: 85%;
+    }
+    
+    .main__section-postPeople>figure{
+        height: 500px;
+    }
+        
+    .header__user-div{
+        display: none;
+    }       
+}
+
+@media screen and (max-width: 550px){
+
+    .modal-content{
+        width: 90%;
+    }
+    /* botones de eliminar o editar */
+    .main__section-postPeople>div{
+        flex-direction: column;
+    }
+
+    .likePost__div{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .likePost{
+        margin-top: 5px;
+        font-size: 12px;
+        width: 100px;
+    }
+
+    .likePost>i{
+        font-size: 14px;
+    }
+
+    .bottonPostUser__div{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bottonPostUser{
+        margin-top: 0px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 899px){
+    .aside_d{
+        display: none;
+    }
+}
