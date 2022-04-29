@@ -39,7 +39,7 @@ export const Home = () => {
   html += `
   <header class="header">
     <div class="header__logo-div">
-      <img class="header__logo" src="../images/icono-header.png">
+      <img class="header__logo" src="images/icono-header.png">
     </div>
     <div class="header__nav-div">
       <nav class="header__nav">
