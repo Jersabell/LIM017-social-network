@@ -86,7 +86,7 @@ const qSnapshot = (querySnapshot) => {
         <p id="postHour">Publicado ${dataDoc.dateTime.toDate().toDateString()} a las ${dataDoc.dateTime.toDate().toLocaleTimeString('es-PE')} hrs.</p>
         <p id="content-p">${dataDoc.content}</p>
         <figure>
-          <img class="post2Img" src="images/foto-post.jpg">
+          <img class="post2Img" src="${dataDoc.photoUpByUser}">
         </figure>
         <div>
         <div class="likePost__div">
@@ -190,8 +190,9 @@ export const printPost = () => {
 // Crea un documento en la coleccion de firestore
 export const toPostDocument = async () => {
   const contentPost = document.getElementById('inputPost__edit').value;
+  const photoUp = document.getElementById('aquiurl').textContent;
   if (!statusOfEdition) {
-    const docRef = await toPost(contentPost);
+    const docRef = await toPost(contentPost, photoUp);
     // eslint-disable-next-line no-console
     console.log(docRef.id);
   } else {
