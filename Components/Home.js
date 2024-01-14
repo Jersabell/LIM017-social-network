@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-restricted-syntax */
-import { loginOutUser } from '../lib/libraries-Firebase.js';
+import { loginOutUser, toFBUpPhoto } from '../lib/libraries-Firebase.js';
 import { getCurrentUser } from '../lib/Firebase-Import.js';
 import {
   toPostDocument, printPost,
@@ -83,6 +83,12 @@ export const Home = () => {
           </div>
           <div class="main__div__Modal" id="post">
             <textarea cols="5" rows="5" class="post__input" id="inputPost__edit" type="text" placeholder="Cuéntanos lo que estás pensando . . ."></textarea>
+            <div class="post__div-upPhoto">
+              <label class="elements__div-upPhoto" for="upPhoto"><i class="fa-solid fa-images"></i></label>
+              <input class="elements__div-upPhoto" type="file" hidden="" id="upPhoto"></input>
+              <p>Foto</p>
+              <div id="aquiurl" ></div>
+            </div>
             <button class="post__button">Publicar</button>
           </div> 
         </div>
@@ -111,7 +117,17 @@ export const Home = () => {
   // click al input boton
   const getInput = document.getElementById('inputPost__editM');
   getInput.addEventListener('click', () => {
-    console.log('sí funciona el evento');
     toShowModal();
   });
+
+  // probando subir foto
+  function fnUpPhoto() {
+    const upPhoto = document.getElementById('upPhoto');
+    upPhoto.addEventListener('change', () => {
+      console.log('subiendo imagen a firebase');
+      const imagenUp = upPhoto.files[0];
+      toFBUpPhoto(imagenUp);
+    });
+  }
+  fnUpPhoto();
 };
